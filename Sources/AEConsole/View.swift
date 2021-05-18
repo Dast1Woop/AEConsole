@@ -175,6 +175,7 @@ extension View {
     
     fileprivate func updateContentLayout() {
         let maxWidth = max(brain.contentWidth, bounds.width)
+        let minWidth = min(brain.contentWidth, bounds.width)
         
         let newFrame = CGRect(x: 0.0, y: 0.0, width: maxWidth, height: bounds.height)
         tableView.frame = newFrame
@@ -184,7 +185,7 @@ extension View {
             top: self.currentTopInset,
             left: inset,
             bottom: inset,
-            right: maxWidth
+            right: maxWidth - minWidth
         )
         self.tableView.contentInset = newInset
 
