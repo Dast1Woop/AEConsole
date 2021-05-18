@@ -183,7 +183,7 @@ extension View {
         let inset = Layout.magicNumber
         let newInset = UIEdgeInsets(
             top: self.currentTopInset,
-            left: inset,
+            left: 0,
             bottom: inset,
             right: maxWidth - minWidth
         )
