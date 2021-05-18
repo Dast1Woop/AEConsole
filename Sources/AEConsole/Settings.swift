@@ -17,7 +17,7 @@ open class Settings {
         static let textColor = UIColor.white
         static let fontSize: CGFloat = 12.0
         static let rowSpacing: CGFloat = 4.0
-        static let opacity: CGFloat = 0.6
+        static let opacity: CGFloat = 1
     }
 
     // MARK: Properties
