@@ -548,9 +548,11 @@ extension View {
     @objc
     internal func didTapFilterClearButton(_ sender: UIButton) {
         textField.resignFirstResponder()
-        if !brain.isEmpty(textField.text) {
+        
+        //filter框框即使为空，也应该执行置nil操作，触发显示过滤前所有log
+//        if !brain.isEmpty(textField.text) {
             brain.filterText = nil
-        }
+//        }
         textField.text = nil
     }
     
