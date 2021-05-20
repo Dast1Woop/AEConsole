@@ -305,11 +305,12 @@ extension View {
         textField.tintColor = textColor
         textField.font = settings.consoleFont.withSize(16)
         textField.textColor = textColor
+        textField.returnKeyType = .search
         let attributes = [
             NSAttributedString.Key.foregroundColor : textColor.withAlphaComponent(0.5)
         ]
         let placeholderText = NSAttributedString(
-            string: "Type filter here...", attributes: attributes
+            string: "在此输入过滤文本", attributes: attributes
         )
         textField.attributedPlaceholder = placeholderText
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(Layout.magicNumber, 0, 0)
